@@ -24,7 +24,7 @@ const ContextProvider=(props)=>{
         setLoading(true);
         setShowResult(true);
         let response;
-        if (prompt!=undefined) {
+        if (prompt!== undefined) {
             response=await run(prompt);
             setRecentPrompt(prompt);   
         }else{
@@ -49,14 +49,15 @@ const ContextProvider=(props)=>{
             delayPara(i,nextWord+" ")   
         }
 
-        const newChat = ()=>{
-            setLoading(false);
-            setShowResult(false);
-        }
+        
 
         setLoading(false)
         setInput("")
 
+    }
+    const newChat = ()=>{
+        setLoading(false);
+        setShowResult(false);
     }
     const contextValue={
         prevPrompt,
